@@ -36,6 +36,12 @@ export class AppComponent implements OnInit, FormsModule {
     });
   }
 
+  getCarsfl(filt: string) {
+    this.connect.getTableDatafl(filt).subscribe(data => {
+      this.autovettura = data;
+    });
+  }
+
   addCar() {
     const newcar = {id: this.id, targa: this.targa, marca: this.marca, modello: this.modello, costo: this.costo, info: this.info, img: this.img};
     this.connect.insertData(newcar).subscribe(response => {
