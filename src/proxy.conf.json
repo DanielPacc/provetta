@@ -1,8 +1,15 @@
 {
     "/": {
-    "target": "http://localhost:8080",
-    "secure": true,
-    "changeOrigin": true,
-    "logLevel": "debug"
-    }
+        "target": "http://localhost:8080",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+
+    "/post": {
+        "target": "http://localhost:8080/post",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+        }
 }

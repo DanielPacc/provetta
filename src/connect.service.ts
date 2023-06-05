@@ -10,7 +10,7 @@ export class connect {
   constructor(private http: HttpClient) { }
 
   getTableData(): Observable<any[]> {
-    return this.http.get<any[]>('/GR.php');
+    return this.http.get<any[]>('/');
   }
 
   getTableDatafl(filt: string): Observable<any[]> {
@@ -23,6 +23,6 @@ export class connect {
   }
 
   deleteData(id: number): Observable<any> {
-    return this.http.delete<any>('/echo/delete/json');
+    return this.http.delete<any>('/');
   }
 }
