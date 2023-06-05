@@ -1,6 +1,6 @@
 {
     "/echo": {
-    "target": "http://localhost:3306",
+    "target": "http://localhost:8080/GR.php",
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug"

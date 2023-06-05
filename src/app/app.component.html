@@ -6,7 +6,7 @@
     <li *ngFor="let user of autovettura">{{ user.id }}</li>
   </ul>
 
-  <form (submit)="addCar()" action="index.html">
+  <form (submit)="addCar()">
     <input type="number" [(ngModel)]="id" name="id">
     <input type="text" [(ngModel)]="targa" name="targa" placeholder="targa">
     <input type="text" [(ngModel)]="marca" name="marca" placeholder="marca">

@@ -7,24 +7,17 @@ import { Observable } from 'rxjs';
   
 })
 export class connect {
-  private baseUrl = 'http://localhost:3306'; 
-  database = 'db_ang';
-  tableName = 'autovettura';
-
   constructor(private http: HttpClient) { }
 
   getTableData(): Observable<any[]> {
-    const url = `${this.baseUrl}/${this.database}/${this.tableName}`;
-    return this.http.get<any[]>(url);
+    return this.http.get<any[]>('/echo/get/json');
   }
 
   insertData(data: any): Observable<any> {
-    const url = `${this.baseUrl}/${this.database}/${this.tableName}`;
-    return this.http.post<any>(url, data);
+    return this.http.post<any>('/echo/post/json', data);
   }
 
   deleteData(id: number): Observable<any> {
-    const url = `${this.baseUrl}/${this.database}/${this.tableName}/${id}`;
-    return this.http.delete<any>(url);
+    return this.http.delete<any>('/echo/delete/json');
   }
 }

@@ -37,7 +37,7 @@ export class AppComponent implements OnInit, FormsModule {
   }
 
   addCar() {
-    const newcar = {d: this.id, targa: this.targa, marca: this.marca, modello: this.modello, costo: this.costo, info: this.info, img: this.img};
+    const newcar = {id: this.id, targa: this.targa, marca: this.marca, modello: this.modello, costo: this.costo, info: this.info, img: this.img};
     this.connect.insertData(newcar).subscribe(response => {
       console.log('User added successfully.');
       this.getCars();
