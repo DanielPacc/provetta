@@ -1,17 +1,18 @@
 <app-nav-bar></app-nav-bar>
-<div>
   <h1>Condividi la tua macchina invece che le tue foto(imbarazzanti)!</h1>
+  <div class="col-6">
   <button (click)="getCars()">Ottieni le macchine degli altri</button>
   <ul>
     <li *ngFor="let user of autovettura">{{ user.id }}{{ user.targa }}{{ user.marca }}{{ user.modello }}{{ user.costo }}{{ user.info }}</li>
   </ul>
-
+</div>
+<div class="col-6">
   <form (submit)="addCar()">
-    <input class="" type="text" [(ngModel)]="targa" name="targa" placeholder="metti la targa, fidati non ti rubiamo nulla :)"><br><br>
-    <input class="" type="text" [(ngModel)]="marca" name="marca" placeholder="marca"><br><br>
-    <input class="" type="text" [(ngModel)]="modello" name="modello" placeholder="modello"><br><br>
-    <input class="" type="number" [(ngModel)]="costo" name="costo"><br><br>
-    <input class="" type="text" [(ngModel)]="info" name="info" placeholder="info"><br><br>
-    <button class="" type="submit">Aggiungi la tua macchina (da bravo ;))</button><br><br>
+    <input type="text" [(ngModel)]="targa" name="targa" placeholder="metti la targa, fidati non ti rubiamo nulla :)"><br><br>
+    <input type="text" [(ngModel)]="marca" name="marca" placeholder="marca"><br><br>
+    <input type="text" [(ngModel)]="modello" name="modello" placeholder="modello"><br><br>
+    <input type="number" [(ngModel)]="costo" name="costo"><br><br>
+    <input type="text" [(ngModel)]="info" name="info" placeholder="info"><br><br>
+    <button type="submit">Aggiungi la tua macchina (da bravo ;))</button><br><br>
   </form>
 </div>

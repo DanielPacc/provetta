@@ -1,0 +1,10 @@
+create database if not exist db_ang;
+use db_ang;
+create table autovettura(
+    id int primary key auto_increment,
+    marca varchar(20) not null,
+    targa varchar(20) not null,
+    modello varchar(20) not null,
+    costo double not null,
+    info varchar(100) not null
+);
