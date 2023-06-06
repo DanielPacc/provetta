@@ -10,16 +10,16 @@ export class connect {
   constructor(private http: HttpClient) { }
 
   getTableData(): Observable<any[]> {
-    return this.http.get<any[]>('/');
+    return this.http.get<any[]>('/api/GR.php');
   }
 
   getTableDatafl(filt: string): Observable<any[]> {
-    return this.http.post<any[]>('/', filt);
+    return this.http.post<any[]>('', filt);
   }
 
 
   insertData(data: any): Observable<any> {
-    return this.http.post<any>('/PR.php', data);
+    return this.http.post<any>('/api/PR.php', data);
   }
 
   deleteData(id: number): Observable<any> {
